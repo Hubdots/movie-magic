@@ -14,7 +14,7 @@ export default [
         imageUrl: "/static/img/jungle-cruise.jpeg",
         director: "Jaume Collet-Serra",
         year: '2021',
-        rating: '6.6',
+        rating: 6.6,
         category: "Movie"
     },
 
@@ -29,7 +29,7 @@ export default [
         imageUrl: "/static/img/the-little-mermaid.jpg",
         director: "Rob Marshall",
         year: '2023',
-        rating: '7.2',
+        rating: 7.2,
         category: "Movie"
     },
 
@@ -48,7 +48,7 @@ export default [
         imageUrl: "/static/img/home-alone.jpeg",
         director: "Chris Columbus",
         year: '1990',
-        rating: '7.7',
+        rating: 7.7,
         category: "Movie"
     },
 
@@ -59,7 +59,7 @@ export default [
         imageUrl: "/static/img/man-of-steel.jpg",
         director: "Zack Snyder",
         year: "2013",
-        rating: "7.1",
+        rating: 7.1,
         category: "Movie"
     },
 ]
