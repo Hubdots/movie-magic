@@ -1,5 +1,6 @@
 export default [
     {
+        id: 1,
         title: 'Jungle Cuise',
         genre: 'Adventure',
         description: `Dreaming about saving countless lives and having another adventure, the feisty English
@@ -14,6 +15,7 @@ export default [
     },
 
     {
+        id: 2,
         title: 'The Little Mermaid',
         genre: 'Fantasy',
         description: `The youngest of King Triton's daughters, Ariel is a beautiful and spirited young mermaid
@@ -23,7 +25,7 @@ export default [
         imageUrl: "/static/img/the-little-mermaid.jpg"
     },
 
-    {
+    {   id: 3,
         title: 'Home Alone',
         genre: 'Comedy',
         description: `It is Christmas time and the McCallister family is preparing for a vacation in Paris,
@@ -38,7 +40,7 @@ export default [
         imageUrl: "/static/img/home-alone.jpeg"
     },
 
-    {
+    {   id: 4,
         title: 'Man of Steel',
         genre: 'Superhero',
         description: `An alien child is evacuated from his dying world and sent to Earth to live among humans. His peace is threatened when other survivors of his home planet invade Earth.`,
