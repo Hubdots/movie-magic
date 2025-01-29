@@ -11,7 +11,11 @@ export default [
         the heart of an impenetrable green maze, searching for something that cannot be found, a
         centuries-old curse and the ruthless aristocrat, Prince Joachim, threaten to put an end to their
         ambitious plans.`,
-        imageUrl: "/static/img/jungle-cruise.jpeg"
+        imageUrl: "/static/img/jungle-cruise.jpeg",
+        director: "Jaume Collet-Serra",
+        year: 2021,
+        rating: 6.6,
+        category: "Movie"
     },
 
     {
@@ -22,7 +26,11 @@ export default [
         with a thirst for adventure. Longing to find out more about the world beyond the sea, Ariel visits
         the surface and falls for the dashing Prince Eric. Following her heart, she makes a deal with the
         evil sea witch, Ursula, to experience life on land.`,
-        imageUrl: "/static/img/the-little-mermaid.jpg"
+        imageUrl: "/static/img/the-little-mermaid.jpg",
+        director: "Rob Marshall",
+        year: 2023,
+        rating: 7.2,
+        category: "Movie"
     },
 
     {   id: "3",
@@ -37,13 +45,21 @@ export default [
         Kevin discovers about two burglars, Harry (Joe Pesci) and Marv (Daniel Stern), about to rob his
         house on Christmas Eve. Kevin acts quickly by wiring his own house with makeshift booby traps to
         stop the burglars and to bring them to justice.`,
-        imageUrl: "/static/img/home-alone.jpeg"
+        imageUrl: "/static/img/home-alone.jpeg",
+        director: "Chris Columbus",
+        year: 1990,
+        rating: 7.7,
+        category: "Movie"
     },
 
     {   id: "4",
         title: 'Man of Steel',
         genre: 'Superhero',
         description: `An alien child is evacuated from his dying world and sent to Earth to live among humans. His peace is threatened when other survivors of his home planet invade Earth.`,
-        imageUrl: "/static/img/man-of-steel.jpg"
+        imageUrl: "/static/img/man-of-steel.jpg",
+        director: "Zack Snyder",
+        year: 2013,
+        rating: 7.1,
+        category: "Movie"
     },
 ]
