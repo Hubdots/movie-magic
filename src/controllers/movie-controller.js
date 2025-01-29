@@ -5,7 +5,8 @@ import movieService from "../services/movie-service.js"
 const movieController = Router();
 
 movieController.get('/search', (req, res) => {
-    res.render('search');
+    const movies = movieService.getAll()
+    res.render('search', { movies });
 });
 
 movieController.get('/create', (req, res) => {
@@ -21,8 +22,8 @@ movieController.post('/create', (req, res) => {
 movieController.get('/:movieId/details', (req, res) => {
     const movieId = req.params.movieId;
     const movie = movieService.findOne(movieId);
-    
-    res.render('details', {movie});
+
+    res.render('details', { movie });
 });
 
 export default movieController;
