@@ -13,8 +13,8 @@ export default [
         ambitious plans.`,
         imageUrl: "/static/img/jungle-cruise.jpeg",
         director: "Jaume Collet-Serra",
-        year: 2021,
-        rating: 6.6,
+        year: '2021',
+        rating: '6.6',
         category: "Movie"
     },
 
@@ -28,8 +28,8 @@ export default [
         evil sea witch, Ursula, to experience life on land.`,
         imageUrl: "/static/img/the-little-mermaid.jpg",
         director: "Rob Marshall",
-        year: 2023,
-        rating: 7.2,
+        year: '2023',
+        rating: '7.2',
         category: "Movie"
     },
 
@@ -47,8 +47,8 @@ export default [
         stop the burglars and to bring them to justice.`,
         imageUrl: "/static/img/home-alone.jpeg",
         director: "Chris Columbus",
-        year: 1990,
-        rating: 7.7,
+        year: '1990',
+        rating: '7.7',
         category: "Movie"
     },
 
@@ -58,8 +58,8 @@ export default [
         description: `An alien child is evacuated from his dying world and sent to Earth to live among humans. His peace is threatened when other survivors of his home planet invade Earth.`,
         imageUrl: "/static/img/man-of-steel.jpg",
         director: "Zack Snyder",
-        year: 2013,
-        rating: 7.1,
+        year: "2013",
+        rating: "7.1",
         category: "Movie"
     },
 ]
