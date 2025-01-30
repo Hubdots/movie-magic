@@ -18,7 +18,13 @@ export default {
 
         return newId;
     },
-    getAll() {
-        return movies;
+    getAll(filter = {}) {
+
+        let result = movies;
+
+        if (filter.search) {
+            result = result.filter(movie => movie.title.toLowerCase().includes(filter.search.toLowerCase()));
+        }
+        return result;
     }
 }
