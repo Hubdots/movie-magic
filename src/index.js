@@ -1,9 +1,26 @@
 import express from 'express';
 import handlebars from 'express-handlebars';
+import mongoose, { mongo } from 'mongoose';
+
 import routes from './routes.js'
 import showRatingHelper from './helpers/rating-helper.js';
 
 const app = express();
+
+// Db configuration
+
+try {
+    const uri = 'mongodb://localhost:27017/magic-movies';
+    await mongoose.connect(uri);
+
+    console.log('DB connected successfully');
+
+} catch (err) {
+    console.log('Cannot connect DB');
+    console.error(err.message); 
+}
+
+// Handlebars configuration 
 
 app.engine('hbs', handlebars.engine({
     extname: 'hbs',
@@ -15,8 +32,12 @@ app.engine('hbs', handlebars.engine({
 app.set('view engine', 'hbs');
 app.set('views', './src/views');
 
-app.use('/static', express.static('src/public'));  
-app.use(express.urlencoded({extended: false}));
+// Express configuration
+
+app.use('/static', express.static('src/public'));
+app.use(express.urlencoded({ extended: false }));
+
+// Setup routes
 
 app.use(routes);
 
