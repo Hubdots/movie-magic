@@ -5,6 +5,9 @@ export default {
         const result = Movie.findById(movieId);
         return result;
     },
+    getOneWithCasts(movieId) {
+        return this.getOne(movieId).populate('casts');
+    },
     create(movieData) {
         
         const result = Movie.create({
