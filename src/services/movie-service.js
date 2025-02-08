@@ -9,13 +9,13 @@ export default {
         return this.getOne(movieId).populate('casts');
     },
     create(movieData) {
-        
+
         const result = Movie.create({
             ...movieData,
             rating: Number(movieData.rating),
             year: Number(movieData.year),
         });
-     
+
 
         return result;
     },
@@ -25,29 +25,37 @@ export default {
 
         if (filter.search) {
             // TO DO: Fix partial case-insensitive search
-            query = query.where({title: filter.search});
+            query = query.where({ title: filter.search });
         };
 
         if (filter.genre) {
             // Add case insensitive search
-            query = query.where({genre: filter.genre});
+            query = query.where({ genre: filter.genre });
         };
 
         if (filter.year) {
-            query = query.where({year: Number(filter.year)})
+            query = query.where({ year: Number(filter.year) })
         };
 
         return query;
     },
 
-    async attachCast(movieId, castId){
+    async attachCast(movieId, castId) {
+
+        //Check if castId is not added already.
 
         // Attach #1
+        // const movie = await Movie.findById(movieId);
+        // if (movie.casts.includes(castId)) {
+        //     return;
+        // }
+        // movie.casts.push(castId);
+        // await movie.save();
 
-        const movie = await Movie.findById(movieId);
-        movie.casts.push(castId);
-        await movie.save();
+        // return movie;
 
-        return movie;
+        // Attach #2
+
+        return Movie.findByIdAndUpdate(movieId, { $push: { casts: castId } });
     }
 }
