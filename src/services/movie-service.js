@@ -6,7 +6,7 @@ export default {
         return result;
     },
     getOneWithCasts(movieId) {
-        return this.getOne(movieId).populate('casts');
+        return this.getOne(movieId).populate('casts.cast');
     },
     create(movieData) {
 
@@ -40,7 +40,7 @@ export default {
         return query;
     },
 
-    async attachCast(movieId, castId) {
+    async attachCast(movieId, castId, character) {
 
         //Check if castId is not added already.
 
@@ -56,6 +56,13 @@ export default {
 
         // Attach #2
 
-        return Movie.findByIdAndUpdate(movieId, { $push: { casts: castId } });
+        return Movie.findByIdAndUpdate(movieId, {
+            $push: {
+                casts: {
+                    cast: castId,
+                    character
+                }
+            }
+        });
     }
-}
+} 
