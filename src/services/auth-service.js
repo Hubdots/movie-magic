@@ -2,7 +2,7 @@ import User from "../models/User.js";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-const SECRET = 'victoriasecret'
+const SECRET = process.env.JWT_SECRET || 'BASICSECRET';
 
 export default {
     register(userData) {
