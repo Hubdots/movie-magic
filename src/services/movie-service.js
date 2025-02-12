@@ -41,7 +41,7 @@ export default {
         return query;
     },
 
-    async attachCast(movieId, castId, character) {
+    attachCast(movieId, castId, character) {
 
         //Check if castId is not added already.
 
@@ -65,5 +65,9 @@ export default {
                 }
             }
         });
+    },
+
+    delete(movieId) {
+        return Movie.findByIdAndDelete(movieId);
     }
 } 
