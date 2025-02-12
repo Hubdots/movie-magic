@@ -1,4 +1,4 @@
-import jwt  from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 
 const SECRET = process.env.JWT_SECRET || 'BASICSECRET';
 
@@ -26,11 +26,12 @@ export const authMiddleware = (req, res, next) => {
         res.clearCookie('auth');
         res.redirect('/auth/login');
     }
-
-
-    
-
-    // DON'T Forget guest users
-
-
 };
+
+export const isAuth = (req, res, next) => {
+    if (!req.user) {
+        return res.redirect('/auth/login');
+    };
+
+    next();
+}
