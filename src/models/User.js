@@ -8,12 +8,19 @@ const userSchema = new Schema({
         match: /\@[a-zA-Z]+.[a-zA-Z]+$/,
         minLength: 10,
     },
-    password: { 
+    password: {
         type: String,
         match: /^\w+$/,
-        minLength: 6,
+        minLength: [6, 'Password should be at least 6 charcters!'],
     },
 });
+
+userSchema.virtual('rePassword')
+    .set(function (rePassword) {
+        if (rePassword !== this.password) {
+            throw new Error('Password mismatch!');
+        }
+    })
 
 userSchema.pre('save', async function () {
     // TODO: fix update user bug
